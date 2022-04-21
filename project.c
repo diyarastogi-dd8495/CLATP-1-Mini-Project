@@ -1,11 +1,12 @@
 #include <stdio.h>
 
-int main(void   ){
-    int r,ch,a,b,ch2,ch1;
+int main(void){
+    int ch,a,b,ch2,ch1;
+    float r, p = 3.14,q=0;
     char choice;
     do {
         printf("Hello! This is a calculator, this will help you perform operations on either a circle or 2 numbers!\n");
-        printf("Do you want to perform operations on a circle or on two numbers?\nType 1 for numbers and 2 for circle:\n");
+        printf("Do you want to perform operations on a circle first or on two numbers first?\nType 1 for numbers and 2 for circle:\n");
         scanf("%d", &ch);
 
         switch(ch){
@@ -20,22 +21,27 @@ int main(void   ){
                 switch(ch2){
                     case 1: {
                         printf("The sum of the two numbers is: %d", (a+b));
+                        printf("\n");
                         break;
                     }
                     case 2: {
                         printf("The difference of the two numbers is: %d", (a-b));
+                        printf("\n");
                         break;
                     }
                     case 3: {
                         printf("The product of the two numbers is: %d", (a*b));
+                        printf("\n");
                         break;
                     }
                     case 4: {
                         printf("The quotient of the two numbers is: %d", (a/b));
+                        printf("\n");
                         break;
                     }
                     case 5: {
                         printf("The remainder of the two numbers is: %d", (a%b));
+                        printf("\n");
                         break;
                     }
                     case 6: {
@@ -47,21 +53,25 @@ int main(void   ){
                 printf("1. Find the area of the circle\n2. Find the circumference of the circle\n3. Find the equation of the circle\n4. Exit");
                 printf("\n");
                 printf("Enter the radius:\n");
-                scanf("%d", &r);
+                scanf("%f", &r);
                 printf("Which one do you want to perform? (Press 1,2,3 or 4):");
                 scanf("%d", &ch1);
 
                 switch(ch1){
                     case 1: {
-                        printf("The are of the circle is: %d", (3.14*r*r));
+                        q = 3.14*r*r;
+                        printf("The area of the circle is: %.2f", q);
+                        printf("\n");
                         break;
                     }
                     case 2: {
-                        printf("The circumference of the circle is: %d", (2*3.14*r));
+                        printf("The circumference of the circle is: %.2f", (2*p*r));
+                        printf("\n");
                         break;
                     }
                     case 3: {
-                        printf("The equation of the circle is: x^2 + y^2 = %d", (r*r));
+                        printf("The equation of the circle is: x^2 + y^2 = %.2f", (r*r));
+                        printf("\n");
                         break;
                     }
                     case 4: {
