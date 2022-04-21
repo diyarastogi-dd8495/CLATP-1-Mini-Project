@@ -5,14 +5,17 @@ int main(void   ){
     char choice;
     do {
         printf("Hello! This is a calculator, this will help you perform operations on either a circle or 2 numbers!\n");
-        scanf("Do you want to perform operations on a circle or on two numbers?\nType 1 for numbers and 2 for circle: %d", &ch);
+        printf("Do you want to perform operations on a circle or on two numbers?\nType 1 for numbers and 2 for circle:\n");
+        scanf("%d", &ch);
 
         switch(ch){
             case 1:{
                 printf("1. Add two numbers\n2. Subtract two numbers\n3. Multiply two numbers\n4. Divide two numbers\n5. Find the remainder between two numbers\n6. Exit");
                 printf("\n");
-                scanf("Enter the two numbers: %d %d", &a, &b);
-                scanf("Which one do you want to perform? (Press 1,2,3,4 or 5) : %d", &ch2);
+                printf("Enter the two numbers:\n");
+                scanf("%d %d", &a, &b);
+                printf("Which one do you want to perform? (Press 1,2,3,4 or 5):\n");
+                scanf("%d", &ch2);
                 
                 switch(ch2){
                     case 1: {
@@ -43,8 +46,10 @@ int main(void   ){
             case 2:{
                 printf("1. Find the area of the circle\n2. Find the circumference of the circle\n3. Find the equation of the circle\n4. Exit");
                 printf("\n");
-                scanf("Enter the radius: %d", &r);
-                scanf("Which one do you want to perform? (Press 1,2,3 or 4) : %d", &ch1);
+                printf("Enter the radius:\n");
+                scanf("%d", &r);
+                printf("Which one do you want to perform? (Press 1,2,3 or 4):");
+                scanf("%d", &ch1);
 
                 switch(ch1){
                     case 1: {
